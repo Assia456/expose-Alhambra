@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto: La Alhambra</title>
-    <!-- Tailwind CSS pour la mise en page rapide -->
+    
+    <!-- 1. Tailwind CSS (Chargé en premier) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Polices élégantes -->
+    
+    <!-- 2. Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-
+    <!-- 3. Ton fichier CSS (Chargé après pour s'appliquer correctement) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased">
 
@@ -31,7 +33,7 @@
         </div>
     </nav>
 
-    <!-- 1. INICIO (HEADER EN PLAIN ÉCRAN) -->
+    <!-- 1. INICIO -->
     <section id="inicio" class="relative min-h-[85vh] flex items-center justify-center text-white px-6 bg-cover bg-center" 
              style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=1600&auto=format&fit=crop');">
         <div class="max-w-3xl text-center space-y-6">
@@ -73,7 +75,7 @@
             </div>
         </section>
 
-        <!-- 3. ARQUITECTURA / PALACIOS NAZARÍES -->
+        <!-- 3. ARQUITECTURA -->
         <section id="arquitectura" class="space-y-10">
             <div class="text-center max-w-2xl mx-auto space-y-3">
                 <span class="text-xs font-bold tracking-widest text-terracotta uppercase">02. Partes Principales</span>
@@ -82,19 +84,16 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
                     <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">🏰</div>
                     <h3 class="font-bold text-lg text-stone-800">La Alcazaba</h3>
                     <p class="text-xs text-stone-600 leading-relaxed">La zona más antigua del monumento. Era el recinto militar fortificado con altas torres de vigilancia.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
                     <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">👑</div>
                     <h3 class="font-bold text-lg text-stone-800">Palacios Nazaríes</h3>
                     <p class="text-xs text-stone-600 leading-relaxed">El corazón real con salas lujosas, inscripciones árabes grabadas y el famoso Patio de los Leones.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
                     <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">🌸</div>
                     <h3 class="font-bold text-lg text-stone-800">El Generalife</h3>
@@ -149,6 +148,8 @@
     <div id="modal-galeria" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
         <img id="modal-img" src="" class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain">
     </div>
+
+    <!-- SCRIPT JS -->
     <script src="script.js"></script>
 </body>
 </html>
