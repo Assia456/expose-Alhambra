@@ -1,11 +1,19 @@
-// ==========================================
-// 1. GESTION DE LA GALERIE D'IMAGES (MODAL)
-// ==========================================
+// 1. ANIMATION DES ÉLÉMENTS AU DÉFILEMENT (FADE IN)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// 2. GALERIE MODAL
 const images = document.querySelectorAll('.galeria-img');
 const modal = document.getElementById('modal-galeria');
 const modalImg = document.getElementById('modal-img');
 
-// Clic sur une image de la galerie pour l'ouvrir en grand
 images.forEach(img => {
     img.addEventListener('click', () => {
         if (modal && modalImg) {
@@ -15,29 +23,24 @@ images.forEach(img => {
     });
 });
 
-// Clic sur le fond noir pour fermer l'image grand format
 if (modal) {
     modal.addEventListener('click', () => {
         modal.style.display = 'none';
     });
 }
 
-// ==========================================
-// 2. LOGIQUE DU QUIZ INTERACTIF
-// ==========================================
+// 3. QUIZ
 function validerQuiz(btn, estCorrect) {
     const reponseDiv = document.getElementById('quiz-reponse');
     if (!reponseDiv) return;
 
-    // Réinitialise les classes de message
-    reponseDiv.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+    reponseDiv.classList.remove('hidden', 'bg-green-900/60', 'text-green-300', 'bg-red-900/60', 'text-red-300');
     
     if (estCorrect) {
         reponseDiv.textContent = "¡Correcto! 🎉 La Alhambra se desarrolló principalmente en el siglo XIII.";
-        reponseDiv.classList.add('bg-green-100', 'text-green-800');
-        btn.classList.add('bg-green-500', 'text-white');
+        reponseDiv.classList.add('bg-green-900/60', 'text-green-300', 'border', 'border-green-500/30');
     } else {
         reponseDiv.textContent = "Incorrecto, ¡inténtalo de nuevo! ❌";
-        reponseDiv.classList.add('bg-red-100', 'text-red-800');
+        reponseDiv.classList.add('bg-red-900/60', 'text-red-300', 'border', 'border-red-500/30');
     }
 }
