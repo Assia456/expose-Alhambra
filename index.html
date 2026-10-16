@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: La Alhambra</title>
+    <!-- Tailwind CSS pour la mise en page rapide -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
 
+</head>
+<body class="antialiased">
+
+    <!-- MENU DE NAVIGATION FIXE -->
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-serif font-bold text-xl text-stone-800">La Alhambra</span>
+            <div class="hidden md:flex gap-6 text-sm font-medium text-stone-600">
+                <a href="#inicio" class="hover:text-terracotta transition">Inicio</a>
+                <a href="#historia" class="hover:text-terracotta transition">Historia</a>
+                <a href="#arquitectura" class="hover:text-terracotta transition">Arquitectura</a>
+                <a href="#galeria" class="hover:text-terracotta transition">Galería</a>
+                <a href="#quiz" class="hover:text-terracotta transition">Quiz</a>
+            </div>
+            <a href="#quiz" class="bg-terracotta hover:bg-terracotta-dark text-white px-4 py-2 rounded-full text-sm font-medium transition shadow-sm">
+                Probar Quiz
+            </a>
+        </div>
+    </nav>
+
+    <!-- 1. INICIO (HEADER EN PLAIN ÉCRAN) -->
+    <section id="inicio" class="relative min-h-[85vh] flex items-center justify-center text-white px-6 bg-cover bg-center" 
+             style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-3xl text-center space-y-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-wide">
+                Proyecto: La Alhambra
+            </h1>
+            <p class="text-xl md:text-2xl text-stone-200 font-serif italic">
+                Un viaje al corazón de Granada
+            </p>
+            <p class="text-stone-300 max-w-xl mx-auto text-sm md:text-base">
+                Descubre la historia, la arquitectura y la belleza de uno de los monumentos más fascinantes de España.
+            </p>
+            <div class="pt-4">
+                <a href="#historia" class="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white font-medium px-8 py-3 rounded-full shadow-lg transition transform hover:-translate-y-0.5">
+                    Explorar →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-24">
+
+        <!-- 2. HISTORIA -->
+        <section id="historia" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">01. Pasado y Legado</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-800">Historia</h2>
+                <p class="text-stone-600 leading-relaxed">
+                    La Alhambra fue construida principalmente en el <strong>siglo XIII</strong> por los musulmanes nazaríes. Durante siglos fue una fortaleza militar (Alcazaba), un palacio real y un símbolo del poder y la cultura andalusí.
+                </p>
+                <div class="p-4 bg-amber-50/60 border-l-4 border-terracotta rounded-r-xl space-y-1">
+                    <p class="font-bold text-stone-800 text-sm">📅 Año Clave: 1492</p>
+                    <p class="text-xs text-stone-600">Granada fue conquistada por los Reyes Católicos, marcando un cambio histórico en el monumento.</p>
+                </div>
+            </div>
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=800&auto=format&fit=crop" alt="Alhambra Historia" class="w-full h-80 object-cover">
+            </div>
+        </section>
+
+        <!-- 3. ARQUITECTURA / PALACIOS NAZARÍES -->
+        <section id="arquitectura" class="space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">02. Partes Principales</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-800">Palacios y Joyas Arquitectónicas</h2>
+                <p class="text-stone-600 text-sm">Los palacios nazaríes destacan por sus detalles, sus decoraciones y sus patios emblemáticos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
+                    <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">🏰</div>
+                    <h3 class="font-bold text-lg text-stone-800">La Alcazaba</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">La zona más antigua del monumento. Era el recinto militar fortificado con altas torres de vigilancia.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
+                    <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">👑</div>
+                    <h3 class="font-bold text-lg text-stone-800">Palacios Nazaríes</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">El corazón real con salas lujosas, inscripciones árabes grabadas y el famoso Patio de los Leones.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:shadow-md transition space-y-4">
+                    <div class="w-12 h-12 bg-amber-100/60 text-terracotta rounded-xl flex items-center justify-center font-bold text-xl">🌸</div>
+                    <h3 class="font-bold text-lg text-stone-800">El Generalife</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Los jardines y la residencia de descanso usada por los reyes nazaríes para relajarse.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GALERÍA PHOTO MODAL -->
+        <section id="galeria" class="space-y-8">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">03. Visuales</span>
+                <h2 class="text-3xl font-bold text-stone-800">Galería de Imágenes</h2>
+                <p class="text-xs text-stone-500">Haz clic en una imagen para verla en grande</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=600&auto=format&fit=crop" class="galeria-img w-full h-48 object-cover rounded-2xl cursor-pointer hover:opacity-90 transition transform hover:scale-[1.02]" alt="Alhambra 1">
+                <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=600&auto=format&fit=crop" class="galeria-img w-full h-48 object-cover rounded-2xl cursor-pointer hover:opacity-90 transition transform hover:scale-[1.02]" alt="Alhambra 2">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" class="galeria-img w-full h-48 object-cover rounded-2xl cursor-pointer hover:opacity-90 transition transform hover:scale-[1.02]" alt="Alhambra 3">
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=600&auto=format&fit=crop" class="galeria-img w-full h-48 object-cover rounded-2xl cursor-pointer hover:opacity-90 transition transform hover:scale-[1.02]" alt="Alhambra 4">
+            </div>
+        </section>
+
+        <!-- 5. QUIZ -->
+        <section id="quiz" class="max-w-xl mx-auto bg-white p-8 rounded-3xl border border-stone-200 shadow-lg space-y-6">
+            <div class="text-center space-y-2">
+                <span class="text-xs font-bold tracking-widest text-terracotta uppercase">Interactive</span>
+                <h2 class="text-2xl font-bold text-stone-800">Quiz de Conocimientos</h2>
+                <p class="text-stone-600 text-sm">¿En qué siglo fue construida principalmente la Alhambra?</p>
+            </div>
+
+            <div class="space-y-3">
+                <button onclick="validerQuiz(this, false)" class="w-full text-left px-5 py-3 rounded-xl border border-stone-200 text-stone-700 hover:bg-stone-50 font-medium text-sm transition">Siglo X</button>
+                <button onclick="validerQuiz(this, false)" class="w-full text-left px-5 py-3 rounded-xl border border-stone-200 text-stone-700 hover:bg-stone-50 font-medium text-sm transition">Siglo XII</button>
+                <button onclick="validerQuiz(this, true)" class="w-full text-left px-5 py-3 rounded-xl border border-stone-200 text-stone-700 hover:bg-stone-50 font-medium text-sm transition">Siglo XIII</button>
+                <button onclick="validerQuiz(this, false)" class="w-full text-left px-5 py-3 rounded-xl border border-stone-200 text-stone-700 hover:bg-stone-50 font-medium text-sm transition">Siglo XV</button>
+            </div>
+
+            <div id="quiz-reponse" class="hidden text-center text-sm font-bold p-3 rounded-xl"></div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 text-center py-8 text-xs space-y-2">
+        <p>¡Buena suerte con vuestro proyecto!</p>
+        <p class="text-stone-600">Creado para la exposición de Granada • Alhambra</p>
+    </footer>
+
+    <!-- MODAL GALERIE JS -->
+    <div id="modal-galeria" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <img id="modal-img" src="" class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
