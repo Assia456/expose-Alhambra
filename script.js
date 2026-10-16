@@ -1,17 +1,17 @@
 // 1. Initialisation des animations au défilement (AOS)
 document.addEventListener("DOMContentLoaded", () => {
     AOS.init({
-        once: false, // L'animation se relance si on remonte/descend la page
-        offset: 120, // Déclenche l'animation un peu avant que l'élément soit entièrement visible
-        duration: 1000 // Vitesse de l'animation en millisecondes
+        once: false, // L'animation se relance à chaque fois qu'on zoome ou défile sur la section
+        offset: 100, // Déclenche l'animation au bon moment
+        duration: 1000 // Durée de l'effet fondu en millisecondes
     });
 });
 
-// 2. Gestion du Quiz interactif
+// 2. Gestion du Quiz interactif de la dernière page
 function validerQuiz(btn, estCorrect) {
-    // On récupère ou crée un conteneur pour afficher le résultat du quiz
     let resultatDiv = document.getElementById('quiz-resultat');
     
+    // Si la boîte de résultat n'existe pas encore sous les boutons, on la crée dynamiquement
     if (!resultatDiv) {
         resultatDiv = document.createElement('div');
         resultatDiv.id = 'quiz-resultat';
@@ -21,9 +21,9 @@ function validerQuiz(btn, estCorrect) {
         resultatDiv.style.fontWeight = "bold";
         resultatDiv.style.textAlign = "center";
         
-        // On l'ajoute juste après les boutons de réponse
-        const zoneBoutons = btn.parentElement;
-        zoneBoutons.appendChild(resultatDiv);
+        // On l'ajoute à l'intérieur de la boîte de quiz
+        const zoneQuiz = btn.closest('.content-overlay');
+        zoneQuiz.appendChild(resultatDiv);
     }
 
     // Affichage du message selon la réponse
