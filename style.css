@@ -1,0 +1,37 @@
+/* Style général et polices */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fcfbf9;
+    color: #2c2926;
+}
+
+h1, h2, h3, .font-serif {
+    font-family: 'Merriweather', serif;
+}
+
+/* Thème de couleurs Terracotta (Alhambra) */
+.bg-terracotta {
+    background-color: #b97a56;
+}
+
+.bg-terracotta-dark {
+    background-color: #8a5e3c;
+}
+
+.text-terracotta {
+    color: #b97a56;
+}
+
+.border-terracotta {
+    border-color: #b97a56;
+}
+
+/* Animations légères pour les images de la galerie */
+.galeria-img {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.galeria-img:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
