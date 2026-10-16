@@ -82,35 +82,34 @@
         </div>
     </section>
 
-    <!-- PAGE 4 : GALERÍA -->
-    <section id="galeria" class="section-fullscreen" style="height: auto; min-height: 100vh; padding: 120px 20px; background-color: #121110;">
-        <div style="max-width: 1000px; margin: 0 auto; width: 100%;">
-            <div style="text-align: center; margin-bottom: 30px;" data-aos="fade-up">
-                <h2 class="title-alhambra">3. Galería</h2>
-                <p style="color: #aaa;">Imágenes clave del monumento</p>
-            </div>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <img src="https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=400&auto=format&fit=crop" style="width: 220px; height: 160px; object-fit: cover; border-radius: 10px;" data-aos="zoom-in" alt="Alhambra">
-                <img src="https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=400&auto=format&fit=crop" style="width: 220px; height: 160px; object-fit: cover; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="100" alt="Alhambra">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" style="width: 220px; height: 160px; object-fit: cover; border-radius: 10px;" data-aos="zoom-in" data-aos-delay="200" alt="Alhambra">
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#quiz" class="btn-alhambra">Pasar al Quiz →</a>
+    <!-- PAGE 4 : GALERÍA (AVEC LE BOUTON DIRECTEMENT SUR LA GRANDE IMAGE) -->
+    <section id="galeria" class="section-fullscreen" style="position: relative; height: 100vh; overflow: hidden;">
+        <!-- Grande image d'arrière-plan en plein écran -->
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1600&auto=format&fit=crop" alt="Galería Alhambra" class="bg-fullscreen">
+        
+        <!-- Boîte de contenu centrée sur l'image avec le bouton vers le quiz -->
+        <div class="content-overlay" data-aos="zoom-in" data-aos-duration="1200">
+            <h2 class="title-alhambra">3. Galería</h2>
+            <p class="text-alhambra">Un vistazo visual a los detalles y rincones más mágicos del monumento.</p>
+            
+            <!-- Le bouton tant attendu -->
+            <div style="margin-top: 20px;">
+                <a href="#quiz" class="btn-alhambra">🎮 Pasar al Quiz →</a>
             </div>
         </div>
     </section>
 
     <!-- PAGE 5 : QUIZ -->
     <section id="quiz" class="section-fullscreen">
-        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1600&auto=format&fit=crop" alt="Quiz background" class="bg-fullscreen">
+        <img src="https://images.unsplash.com/photo-1568849676085-51415703900f?q=80&w=1600&auto=format&fit=crop" alt="Quiz background" class="bg-fullscreen">
         <div class="content-overlay" data-aos="zoom-in" data-aos-duration="1000">
             <h2 class="title-alhambra">Quiz de la Alhambra</h2>
             <p class="text-alhambra">¿En qué siglo fue construida principalmente la Alhambra?</p>
             
             <div style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto;">
-                <button onclick="alert('Incorrecto ❌')" class="btn-alhambra" style="background: #333;">A) Siglo X</button>
-                <button onclick="alert('¡Correcto! 🎉 Siglo XIII')" class="btn-alhambra" style="background: #2e7d32;">B) Siglo XIII</button>
-                <button onclick="alert('Incorrecto ❌')" class="btn-alhambra" style="background: #333;">C) Siglo XV</button>
+                <button onclick="validerQuiz(this, false)" class="btn-alhambra" style="background: #333; border: none; cursor: pointer;">A) Siglo X</button>
+                <button onclick="validerQuiz(this, true)" class="btn-alhambra" style="background: #2e7d32; border: none; cursor: pointer;">B) Siglo XIII</button>
+                <button onclick="validerQuiz(this, false)" class="btn-alhambra" style="background: #333; border: none; cursor: pointer;">C) Siglo XV</button>
             </div>
             
             <div style="margin-top: 30px;">
@@ -121,9 +120,10 @@
 
     <!-- Scripts pour l'animation AOS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
     <script>
         AOS.init({
-            once: false, // Permet de relancer l'animation si on remonte/redescend
+            once: false,
             offset: 100
         });
     </script>
