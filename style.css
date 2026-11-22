@@ -263,3 +263,17 @@ ul li::before {
         height: 250px;
     }
 }
+
+/* Apparition retardée du texte sur la première diapo */
+.intro-box {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: apparaitreDoucement 1.2s ease-out 3s forwards;
+}
+
+@keyframes apparaitreDoucement {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
